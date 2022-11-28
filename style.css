@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height:100px;
+    align-items: center;
+    padding:0 14px;
+}
+.logo{
+    font-size: 24px;
+    color: #6030b1;
+    margin: 0 12px;
+    font-weight: bold;
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+    list-style-type: none;
+}
+.nav_link{
+    margin:0 12px;
+    color: #242424;
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+    position:relative;
+    transition: opacity 300ms ease;
+}
+.link_hover-effect--black:after{
+    background-color: #000; 
+}
+.link_hover-effect:after{
+    content:"";
+    transition: all 300ms ease;
+    position:absolute;
+    height:3px;
+    width:0;
+    bottom:-3px;
+    right:0;
+}
+.link_hover-effect:hover:after{
+    width:100%;
+    left:0;
+}
+.nav_link_container{
+    padding:8px 20px;
+    background-color:#6030b1;
+    border-radius:50px;
+    color:#fff;
+}
+.nav_link_container:hover{
+    background-color:#5d3eff;
+}
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex: 1;
+}
+.about-me_info {
+    display: flex;
+    flex-direction: column;
+}
+.about-me_info-container{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    max-width:600px;
+    margin:0 auto;
+    text-align:center;
+}
+.about-me_picture-mask{
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 16%);
+    margin-bottom:28px;
+    animation: animate-profile-picture 800ms 200ms backwards;
+}
+.about-me_picture{
+    width:100%;
+    transform:scale(1.5);
+}
+.text-purple{
+    color:#6030b1;
+}
+@keyframes fade-up{
+0%{
+    opacity:0;
+    transform: translateY(40px);
+}
+100% {
+    opacity:1;
+    transform:translateY(0px);
+}
+}
+@keyframes animate-wave{
+50%{
+    transform: rotate(30deg);
+}
+}
+.about-me_info--title{
+    margin-bottom:16px;
+    animation: fade-up 650ms 400ms backwards;
+}
+.wave{
+    display:inline-block;
+    animation: animate-wave 500ms infinite ease-in-out;
+}
+.about-me_info-para{
+    font-size:20px;
+    margin-bottom:28px;
+    animation: fade-up 650ms 600ms backwards;
+}
+a{
+    text-decoration: none;
+    position:relative;
+    transition: opacity 300ms ease;
+}
+.about-me_links{
+    animation:fade-up 650ms 800ms backwards;
+}
+.about-me_link{
+    font-size:20px;
+    padding:0 16px;
+    color:#242424;
+}
+.container{
+    padding:50px 0;
+}
+.row{
+    width:100%;
+    max-width:800px;
+    margin:0 auto;
+    padding: 0 12px;
+}
+h1, h2, h3, h4, h5, h6, span{
+    text-align:center;
+    color:#242424;
+    line-height:1.25;
+}
+.title{
+    margin-bottom:20px;
+}
+.color{
+    background-color: #f8f8f8;
+}
+h1{
+    font-size:36px;
+}
+.language-list{
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+/*Side note...transform and opacity are commonly used with the ":hover" effect*/
+.language{
+    width:25%;
+    display:flex;
+    justify-content: center;
+    position: relative;
+}
+.language_img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px;
+}
+.language_img{
+    width:100%;
+    max-width:100px;
+    transition: all 300ms;
+}
+.language:hover .language_img{
+    transform: scale(0.9);
+    filter: brightness(80%);
+    opacity: 0.86;
+}
+.language_name{
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    font-size: 20px;
+    opacity: 0;
+}
+.language:hover .language_name{
+    transform: scale(1);
+    opacity: 1;
+}
+.project_list{
+    padding-top:40px;
+}
+.project{
+    margin-bottom:135px;
+}
+li{
+    list-style-type:none;
+}
